@@ -1,0 +1,74 @@
+body {
+  font-family: "Open Sans", sans-serif !important;
+  line-height: 1.25 !important;
+}
+table {
+  border: 1px solid #ccc !important;
+  border-collapse: collapse !important;
+  margin: auto !important;
+  padding: 0 !important;
+  width: 60% !important;
+  
+  table-layout: fixed !important;
+}
+table caption {
+  font-size: 1.5em !important;
+  margin: .5em 0 .75em !important;
+}
+table tr {
+  background: #f8f8f8 !important;
+  border: 1px solid #ddd !important;
+  padding: .35em !important;
+}
+table th,
+table td {
+  padding: .625em !important;
+  text-align: center !important;
+}
+table th {
+  font-size: .85em !important;
+  letter-spacing: .1em !important;
+  text-transform: uppercase !important;
+}
+@media screen and (max-width: 600px) {
+  table {
+    border: 0 !important;
+  }
+  table caption {
+    font-size: 1.3em !important;
+  }
+  table thead {
+    border: none !important;
+    clip: rect(0 0 0 0) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+  }
+  table tr {
+    border-bottom: 3px solid #ddd !important;
+    display: block !important;
+    margin-bottom: .625em !important;
+  }
+  table td {
+    border-bottom: 1px solid #ddd !important;
+    display: block !important;
+    font-size: .8em !important;
+    text-align: right !important;
+  }
+  table td:before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label) !important;
+    float: left !important;
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+  }
+  table td:last-child {
+    border-bottom: 0 !important;
+  }
+}
